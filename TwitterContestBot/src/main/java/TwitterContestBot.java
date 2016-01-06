@@ -26,9 +26,10 @@ public class TwitterContestBot {
 	String fileName;
 	
 	public TwitterContestBot(){
+		fileName = "tcbconfig.JSON";
 		TwitterFactory factory = new TwitterFactory(Configure().build());
 		twitter = factory.getInstance();
-		fileName = "tcbconfig.JSON";
+		
 	}
 	
 	
@@ -62,6 +63,9 @@ public class TwitterContestBot {
 		cb.setOAuthConsumerSecret(configInfo.get("consumerSecret"));
 		cb.setOAuthAccessToken(configInfo.get("accessToken"));
 		cb.setOAuthAccessTokenSecret(configInfo.get("accessTokenSecret"));
+		
+		
+		System.out.println(configInfo.get("consumerKey") + "   " + configInfo.get("consumerSecret") + "   " + configInfo.get("accessToken") + "   " + configInfo.get("accessTokenSecret"));
 		
 		return cb;
 		
