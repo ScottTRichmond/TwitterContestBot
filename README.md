@@ -8,3 +8,8 @@ Retweet or favorite tweet.
 
 
 Alter .JSON file with appropriate information and put in same directory as .jar prior to execution.
+
+
+Dependencies:
+  twitter4j-core-4.0.4
+  json-simple-1.1.1
